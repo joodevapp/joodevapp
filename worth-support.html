@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worth – Support</title>
+<meta name="description" content="Help and contact for Worth, the inflation calculator app.">
+<style>
+  :root {
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --ink: #111418;
+    --muted: #5B6168;
+    --border: #E2E0DA;
+    --green: #1E7A52;
+    --green-soft: #E3F1EA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .logo {
+    width: 40px; height: 40px; border-radius: 10px; background: var(--green);
+    display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 20px;
+  }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0; }
+  .meta { color: var(--muted); font-size: 14px; margin: 4px 0 24px; }
+  .langs { display: flex; gap: 8px; margin-bottom: 24px; }
+  .langs button {
+    font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--border); background: var(--card); color: var(--ink);
+  }
+  .langs button[aria-pressed="true"] { border-color: var(--green); background: var(--green-soft); color: var(--green); font-weight: 600; }
+  section.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 4px 24px 20px; }
+  h2 { font-size: 18px; margin: 24px 0 6px; }
+  p, li { color: #2B3036; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  a { color: var(--green); }
+  .contact { background: var(--green-soft); border-radius: 12px; padding: 14px 16px; margin-top: 20px; }
+  .contact a { font-weight: 600; }
+  [data-lang] { display: none; }
+  [data-lang].active { display: block; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 24px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo" aria-hidden="true">W</div>
+    <h1 id="title">Support</h1>
+  </header>
+  <p class="meta" id="meta">Worth – Inflation calculator</p>
+
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-set="en" aria-pressed="true">English</button>
+    <button type="button" data-set="ko" aria-pressed="false">한국어</button>
+  </div>
+
+  <!-- English -->
+  <section class="card active" data-lang="en" lang="en">
+    <div class="contact">
+      Questions, bugs or ideas? Email <a href="mailto:joo.dev.app@gmail.com?subject=Worth%20support">joo.dev.app@gmail.com</a>.
+      You can also use Settings › Send feedback in the app, which adds your app version for us.
+    </div>
+
+    <h2>What does Worth do?</h2>
+    <p>Worth uses official consumer price index (CPI) data to show what an amount of money from one date is
+      worth at another, whether your salary kept up with inflation, and each year's inflation rate.</p>
+
+    <h2>Where does the data come from?</h2>
+    <ul>
+      <li>United States: U.S. Bureau of Labor Statistics (CPI-U, all items)</li>
+      <li>United Kingdom: Office for National Statistics (CPI index D7BT)</li>
+      <li>EU and EEA countries: Eurostat (HICP, all items)</li>
+      <li>South Korea: Statistics Korea, KOSIS (consumer price index, all items)</li>
+    </ul>
+    <p>The app checks for new data automatically. Settings › Data sources & updates shows the latest month and
+      has a "Check now" button.</p>
+
+    <h2>Why is my result different from another calculator?</h2>
+    <p>Calculators can use different indexes (for example HICP instead of a national CPI), different months, or
+      yearly instead of monthly averages. Worth uses monthly index values and, for salaries, yearly averages
+      (the latest 12 months for the current year). Results are rounded estimates for information only, not financial advice.</p>
+
+    <h2>Does it work offline?</h2>
+    <p>Yes. Worth keeps a copy of the data on your device and updates it when you are back online.</p>
+
+    <h2>How do I delete my history?</h2>
+    <p>Open History and swipe an entry to the left, or tap "Clear all". History is stored only on your device.</p>
+
+    <h2>How do I change the language, country or number format?</h2>
+    <p>Open Settings (the gear icon on the Calculate, Salary or Charts tab).</p>
+
+    <h2>Privacy</h2>
+    <p>See the <a href="worth-privacy-policy.html">privacy policy</a>.</p>
+  </section>
+
+  <!-- 한국어 -->
+  <section class="card" data-lang="ko" lang="ko">
+    <div class="contact">
+      문의, 오류 제보, 제안은 <a href="mailto:joo.dev.app@gmail.com?subject=Worth%20%EB%AC%B8%EC%9D%98">joo.dev.app@gmail.com</a>으로 보내 주세요.
+      앱의 설정 › 의견 보내기를 쓰면 앱 버전 정보가 함께 담겨요.
+    </div>
+
+    <h2>Worth는 어떤 앱인가요?</h2>
+    <p>공식 소비자물가지수(CPI)로 그때 돈이 지금 얼마의 가치인지, 내 연봉이 물가만큼 올랐는지, 해마다 물가가 얼마나 올랐는지 보여 주는 물가 계산기예요.</p>
+
+    <h2>데이터는 어디서 오나요?</h2>
+    <ul>
+      <li>미국: 미국 노동통계국(BLS) 소비자물가지수 CPI-U 총지수</li>
+      <li>영국: 영국 통계청(ONS) 소비자물가지수 D7BT</li>
+      <li>EU·EEA 국가: Eurostat 조화소비자물가지수(HICP) 총지수</li>
+      <li>대한민국: 통계청 KOSIS 소비자물가지수 총지수</li>
+    </ul>
+    <p>새 데이터는 앱이 자동으로 확인해요. 설정 › 데이터 출처 · 업데이트에서 최신 월을 보고 "지금 확인"으로 바로 받을 수 있어요.</p>
+
+    <h2>다른 계산기와 결과가 왜 다른가요?</h2>
+    <p>계산기마다 쓰는 지수(예: 국가 CPI와 HICP), 기준 월, 월별·연평균 방식이 달라서 결과가 조금씩 달라요. Worth는 월별 지수값을 쓰고,
+      연봉 계산은 연평균(올해는 최근 12개월 평균)을 써요. 결과는 반올림한 추정치로 참고용이며 금융 조언이 아니에요.</p>
+
+    <h2>인터넷 없이도 되나요?</h2>
+    <p>네. 데이터를 기기에 저장해 두고, 다시 연결되면 업데이트해요.</p>
+
+    <h2>기록은 어떻게 지우나요?</h2>
+    <p>기록 탭에서 항목을 왼쪽으로 밀거나 "전체 삭제"를 누르세요. 기록은 기기에만 저장돼요.</p>
+
+    <h2>언어, 국가, 숫자 형식은 어디서 바꾸나요?</h2>
+    <p>계산·연봉·차트 탭 오른쪽 위의 톱니바퀴(설정)에서 바꿀 수 있어요.</p>
+
+    <h2>개인정보</h2>
+    <p><a href="worth-privacy-policy.html?lang=ko">개인정보 처리방침</a>을 확인하세요.</p>
+  </section>
+
+  <footer>© 2026 joodevapp · Worth</footer>
+</main>
+<script>
+  (function () {
+    var text = {
+      en: { title: 'Support', meta: 'Worth – Inflation calculator', doc: 'Worth – Support' },
+      ko: { title: '고객 지원', meta: 'Worth – 물가 계산기', doc: 'Worth – 고객 지원' }
+    };
+    function show(lang) {
+      if (!text[lang]) lang = 'en';
+      document.documentElement.lang = lang;
+      document.getElementById('title').textContent = text[lang].title;
+      document.getElementById('meta').textContent = text[lang].meta;
+      document.title = text[lang].doc;
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('[data-set]').forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.getAttribute('data-set') === lang ? 'true' : 'false');
+      });
+    }
+    document.querySelectorAll('[data-set]').forEach(function (btn) {
+      btn.addEventListener('click', function () { show(btn.getAttribute('data-set')); });
+    });
+    var param = new URLSearchParams(location.search).get('lang');
+    var browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    show(param || (browser === 'ko' ? 'ko' : 'en'));
+  })();
+</script>
+</body>
+</html>
